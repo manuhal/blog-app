@@ -14,12 +14,13 @@
     <div class="container">
         <header>
             <div class="nav-left">
-                <h1><a href="{% url 'home' %}">Django blog</a></h1>
+                <h1 class="display-4 text-uppercase font-weight-bolder"><a href="{% url 'home' %}">Django blog</a></h1>
             </div>
             <div class="nav-right">
-                <a href="{% url 'post_new' %}"> + New Blog Post</a>
+                <a href="{% url 'post_new' %}" class="btn btn-dark rounded-pill"> + New Blog Post</a>
             </div>
         </header>
+        <hr class="mt-0 pb-3"/>
         
         <div>
             {% block content %}

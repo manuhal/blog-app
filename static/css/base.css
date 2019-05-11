@@ -6,13 +6,16 @@ body {
   }
   
   header {
-    border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
+    /*border-bottom: 1px solid #999;*/
+    margin-top: 2rem;
     display: flex;
+    /*align-items: center;*/
+    justify-content: space-between;
+
   }
   
   header h1 a {
-    color: red;
+    color: #343a40;;
     text-decoration: none;
   }
   
@@ -21,8 +24,10 @@ body {
   }
   
   .nav-right {
-    display: flex;
-    padding-top: 2rem;
+    /*display: flex;*/
+    /*padding-top: 2rem;*/
+    /*padding-top: 1rem;*/
+    align-self: center;
   }
   
   .post-entry {
@@ -35,7 +40,7 @@ body {
   
   .post-entry h2 a,
   .post-entry h2 a:visited {
-    color: blue;
+    /*color: blue;*/
     text-decoration: none;
   }
   

@@ -9,6 +9,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Update" class="btn btn-dark"/>
+        <input type="button" value="Cancel" onclick="window.history.back()" class="btn btn-dark">
     </form>
 
 {% endblock content %}
