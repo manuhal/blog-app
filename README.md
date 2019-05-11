@@ -1,2 +1,2 @@
 # Blog App
-Just a simple blog-app with Django 2
+Just a simple blog-app with Django 2.1
