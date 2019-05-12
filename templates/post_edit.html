@@ -12,6 +12,9 @@
             <input type="submit" value="Update" class="btn btn-dark"/>
             <input type="button" value="Cancel" onclick="window.history.back()" class="btn btn-dark">
         </form>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">login</a> to edit this post</p>
+
     {% endif %}
 
 {% endblock content %}
