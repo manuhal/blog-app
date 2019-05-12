@@ -1,0 +1,15 @@
+{#templates/registration/login.html#}
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Login</h2>
+    {% block authenticated %}<!--hide login link --> {% endblock authenticated %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="Submit" value="Login" class="btn btn-dark"/>
+    </form>
+
+{% endblock content %}

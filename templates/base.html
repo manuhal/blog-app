@@ -12,6 +12,15 @@
 </head>
 <body>
     <div class="container">
+    {% block authenticated %}
+        <div class="text-right small">
+            {% if user.is_authenticated %}
+                <p>Hi {{ user.username }} ! Click <a href="{%  url 'logout' %}">here to logout</a></p>
+            {% else %}
+                <p>You are not logged in. Click <a href="{%  url 'login' %}">here to login</a></p>
+            {% endif %}
+        </div>
+    {% endblock authenticated %}
         <header>
             <div class="nav-left">
                 <h1 class="display-4 text-uppercase font-weight-bolder"><a href="{% url 'home' %}">Django blog</a></h1>
@@ -21,7 +30,7 @@
             </div>
         </header>
         <hr class="mt-0 pb-3"/>
-        
+
         <div>
             {% block content %}
             {% endblock content %}
