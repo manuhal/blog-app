@@ -2,8 +2,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if user.is_authenticated %}
     <h1>Deleting Post</h1>
-    <form action="" method="post">
+    <form action="" method="post"
         {% csrf_token %}
         <p>Are you sure to delete <b>{{ post.title }}</b> entry?</p>
         <p>
@@ -11,4 +12,7 @@
             <input type="button" value="Cancel" onclick="window.history.back()" class="btn btn-dark">
         </p>
     </form>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">login</a> to delete <b>{{ post.title }}</b> post</p>
+    {% endif %}
 {% endblock content %}
